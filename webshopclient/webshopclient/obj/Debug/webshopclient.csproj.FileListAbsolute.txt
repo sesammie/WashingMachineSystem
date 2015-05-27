@@ -1,0 +1,27 @@
+C:\Users\Rens\Documents\Visual Studio 2013\webshop CSA\webshopclient\webshopclient\bin\Debug\webshopclient.exe.config
+C:\Users\Rens\Documents\Visual Studio 2013\webshop CSA\webshopclient\webshopclient\bin\Debug\webshopclient.exe
+C:\Users\Rens\Documents\Visual Studio 2013\webshop CSA\webshopclient\webshopclient\bin\Debug\webshopclient.pdb
+C:\Users\Rens\Documents\Visual Studio 2013\webshop CSA\webshopclient\webshopclient\obj\Debug\webshopclient.csprojResolveAssemblyReference.cache
+C:\Users\Rens\Documents\Visual Studio 2013\webshop CSA\webshopclient\webshopclient\obj\Debug\webshopclient.Form1.resources
+C:\Users\Rens\Documents\Visual Studio 2013\webshop CSA\webshopclient\webshopclient\obj\Debug\webshopclient.Properties.Resources.resources
+C:\Users\Rens\Documents\Visual Studio 2013\webshop CSA\webshopclient\webshopclient\obj\Debug\webshopclient.csproj.GenerateResource.Cache
+C:\Users\Rens\Documents\Visual Studio 2013\webshop CSA\webshopclient\webshopclient\obj\Debug\webshopclient.exe
+C:\Users\Rens\Documents\Visual Studio 2013\webshop CSA\webshopclient\webshopclient\obj\Debug\webshopclient.pdb
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\webshop CSA\webshopclient\webshopclient\bin\Debug\webshopclient.exe.config
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\webshop CSA\webshopclient\webshopclient\obj\Debug\webshopclient.exe
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\webshop CSA\webshopclient\webshopclient\obj\Debug\webshopclient.pdb
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\webshop CSA\webshopclient\webshopclient\bin\Debug\webshopclient.exe
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\webshop CSA\webshopclient\webshopclient\bin\Debug\webshopclient.pdb
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\webshop CSA\webshopclient\webshopclient\obj\Debug\webshopclient.csprojResolveAssemblyReference.cache
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\webshop CSA\webshopclient\webshopclient\obj\Debug\webshopclient.Form1.resources
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\webshop CSA\webshopclient\webshopclient\obj\Debug\webshopclient.Properties.Resources.resources
+C:\Users\Sam\Documents\Visual Studio 2013\Projects\webshop CSA\webshopclient\webshopclient\obj\Debug\webshopclient.csproj.GenerateResource.Cache
+C:\Users\Sam\Documents\GitHub\WashingMachineSystem\webshopclient\webshopclient\bin\Debug\webshopclient.exe.config
+C:\Users\Sam\Documents\GitHub\WashingMachineSystem\webshopclient\webshopclient\obj\Debug\webshopclient.exe
+C:\Users\Sam\Documents\GitHub\WashingMachineSystem\webshopclient\webshopclient\obj\Debug\webshopclient.pdb
+C:\Users\Sam\Documents\GitHub\WashingMachineSystem\webshopclient\webshopclient\obj\Debug\webshopclient.csprojResolveAssemblyReference.cache
+C:\Users\Sam\Documents\GitHub\WashingMachineSystem\webshopclient\webshopclient\obj\Debug\webshopclient.Form1.resources
+C:\Users\Sam\Documents\GitHub\WashingMachineSystem\webshopclient\webshopclient\obj\Debug\webshopclient.Properties.Resources.resources
+C:\Users\Sam\Documents\GitHub\WashingMachineSystem\webshopclient\webshopclient\obj\Debug\webshopclient.csproj.GenerateResource.Cache
+C:\Users\Sam\Documents\GitHub\WashingMachineSystem\webshopclient\webshopclient\bin\Debug\webshopclient.exe
+C:\Users\Sam\Documents\GitHub\WashingMachineSystem\webshopclient\webshopclient\bin\Debug\webshopclient.pdb
