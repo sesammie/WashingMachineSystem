@@ -11,6 +11,6 @@ namespace WashSystem
     public interface IService1
     {
         [OperationContract]
-        string x();      
+        ClothesTypes x(Clothes clothes);      
     }   
 }
