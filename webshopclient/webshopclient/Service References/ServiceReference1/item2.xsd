@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WashSystem" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WashSystem" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Clothes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClothesType" type="tns:ClothesTypes" />
+      <xs:element minOccurs="0" name="Detergent" type="tns:Detergents" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" type="tns:Locations" />
+      <xs:element minOccurs="0" name="MaxTemp" type="xs:int" />
+      <xs:element minOccurs="0" name="WashType" type="tns:WashTypes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Clothes" nillable="true" type="tns:Clothes" />
+  <xs:simpleType name="ClothesTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pants" />
+      <xs:enumeration value="Sweater" />
+      <xs:enumeration value="Vest" />
+      <xs:enumeration value="Shirt" />
+      <xs:enumeration value="Socks" />
+      <xs:enumeration value="Underwear" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ClothesTypes" nillable="true" type="tns:ClothesTypes" />
+  <xs:simpleType name="Detergents">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Black" />
+      <xs:enumeration value="Super" />
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Natural" />
+      <xs:enumeration value="White" />
+      <xs:enumeration value="Colors" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Detergents" nillable="true" type="tns:Detergents" />
+  <xs:simpleType name="Locations">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Washer" />
+      <xs:enumeration value="LaundryBasket" />
+      <xs:enumeration value="Elsewhere" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Locations" nillable="true" type="tns:Locations" />
+  <xs:simpleType name="WashTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Coloureds" />
+      <xs:enumeration value="WhiteWash" />
+      <xs:enumeration value="Delicates" />
+      <xs:enumeration value="HandWash" />
+      <xs:enumeration value="WoolWax" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WashTypes" nillable="true" type="tns:WashTypes" />
+</xs:schema>

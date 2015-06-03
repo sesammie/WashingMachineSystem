@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace webshopclient
-{
-    
+{  
     public partial class Form1 : Form
     {
         private Service.Service1Client proxy;

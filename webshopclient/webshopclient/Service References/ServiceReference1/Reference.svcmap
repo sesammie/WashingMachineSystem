@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="63e9283f-f4ec-492e-adfe-34ce4acf9987" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1394cb1a-c84f-4662-968e-b83d026cc87b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,11 @@
     <MetadataSource Address="http://127.0.0.1:8733/Design_Time_Addresses/WashSystem/Service1/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="793150a0-8ed8-4135-8bce-0fbb46cef0b5" SourceId="1" SourceUrl="http://127.0.0.1:8733/Design_Time_Addresses/WashSystem/Service1/?disco" />
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="c74fb59d-9624-44c7-89a7-448ec483fba6" SourceId="1" SourceUrl="http://127.0.0.1:8733/Design_Time_Addresses/WashSystem/Service1/?xsd=xsd1" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="28f6f754-276d-439b-8653-a52ef8a3d0bb" SourceId="1" SourceUrl="http://127.0.0.1:8733/Design_Time_Addresses/WashSystem/Service1/?xsd=xsd0" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="40e55e4a-98fe-480f-a9d0-c2a8fd9ede52" SourceId="1" SourceUrl="http://127.0.0.1:8733/Design_Time_Addresses/WashSystem/Service1/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="0c65623e-9aaa-4a69-a569-59409e1124f5" SourceId="1" SourceUrl="http://127.0.0.1:8733/Design_Time_Addresses/WashSystem/Service1/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="ebb6116c-f278-4381-9694-178bd3d8f0ee" SourceId="1" SourceUrl="http://127.0.0.1:8733/Design_Time_Addresses/WashSystem/Service1/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="56ac46f3-99d4-4476-8429-b50e084579f3" SourceId="1" SourceUrl="http://127.0.0.1:8733/Design_Time_Addresses/WashSystem/Service1/?xsd=xsd0" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="339f8872-6cfe-4038-8669-b25e4cb61193" SourceId="1" SourceUrl="http://127.0.0.1:8733/Design_Time_Addresses/WashSystem/Service1/?xsd=xsd2" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="625990bf-bb95-4f23-a839-17e3c3fc8170" SourceId="1" SourceUrl="http://127.0.0.1:8733/Design_Time_Addresses/WashSystem/Service1/?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
