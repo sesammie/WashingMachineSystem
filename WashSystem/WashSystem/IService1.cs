@@ -11,6 +11,10 @@ namespace WashSystem
     public interface IService1
     {
         [OperationContract]
-        ClothesTypes x(Clothes clothes);      
+        List<Program> GetProgramList();
+        [OperationContract]
+        List<WashTypes> GetWashTypeList();
+        [OperationContract]
+        List<Detergents> GetDetergentList();
     }   
 }

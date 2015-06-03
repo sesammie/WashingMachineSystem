@@ -18,13 +18,16 @@ namespace WashSystem
         public Detergents Detergent { get; private set; }
         [DataMember]
         public int Temperature { get; private set; }
-        
-        public Program(string name, int duration, Detergents detergent, int temperature)
+        [DataMember]
+        public int Centrifuging { get; private set; }
+
+        public Program(string name, int duration, Detergents detergent, int temperature, int centrifuging)
         {
             Name = name;
             Duration = duration;
             Detergent = detergent;
             Temperature = temperature;
+            Centrifuging = centrifuging;
         }
     }
 }
