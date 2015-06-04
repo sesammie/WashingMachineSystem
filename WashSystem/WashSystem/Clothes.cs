@@ -24,8 +24,10 @@ namespace WashSystem
         public int MaxTemp { get; private set; }
         [DataMember]
         public string Info { get; private set; }
+        [DataMember]
+        public int Weight { get; private set; }
 
-        public Clothes(int id, string clothesTypes, string washTypes, string detergents, string location, int maxTemp, string info)
+        public Clothes(int id, string clothesTypes, string washTypes, string detergents, string location, int maxTemp, string info, int weight)
         {
             Id = id;
             ClothesType = clothesTypes;
@@ -34,6 +36,7 @@ namespace WashSystem
             Location = location;
             MaxTemp = maxTemp;
             Info = info;
+            Weight = weight;
         }
 
     }

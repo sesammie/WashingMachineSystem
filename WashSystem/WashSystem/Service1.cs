@@ -22,9 +22,9 @@ namespace WashSystem
             WashTypesList = new List<WashTypes>();
             DetergentsList = new List<Detergents>();
 
-            ProgramList.Add(new Program("Natural", 120, Detergents.Natural, 120, 800));
-            ProgramList.Add(new Program("White", 30, Detergents.White, 120, 8000));
-            ProgramList.Add(new Program("Colors", 60, Detergents.Colors, 120, 8000));
+            ProgramList.Add(new Program("Natural", 120, Detergents.Natural, 120, 800, 100));
+            ProgramList.Add(new Program("White", 30, Detergents.White, 120, 8000, 200));
+            ProgramList.Add(new Program("Colors", 60, Detergents.Colors, 120, 8000, 300));
 
             WashTypesList.Clear();
             foreach (WashTypes washType in Enum.GetValues(typeof(WashTypes)))
@@ -42,12 +42,6 @@ namespace WashSystem
         {
             return ProgramList;
         }
-        
-        public List<Clothes> GetClothesList()
-        {
-            return database.GetAllClothes();
-        }
-
         public List<WashTypes> GetWashTypeList()
         {
             return WashTypesList;
@@ -56,6 +50,15 @@ namespace WashSystem
         {
             return DetergentsList;
         }
+        public List<Clothes> GetClothesList()
+        {
+            return database.GetAllClothes();
+        }
+        public bool AddClothes()
+        {
+            return database.AddClothes("Pants", "sf", 1, 1, 50, 12, 250);
+        }
+
 
       //  public 
     }

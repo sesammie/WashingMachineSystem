@@ -18,5 +18,7 @@ namespace WashSystem
         List<Detergents> GetDetergentList();
         [OperationContract]
         List<Clothes> GetClothesList();
+        [OperationContract]
+        bool AddClothes();
     }   
 }

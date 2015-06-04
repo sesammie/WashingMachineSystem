@@ -20,14 +20,17 @@ namespace WashSystem
         public int Temperature { get; private set; }
         [DataMember]
         public int Centrifuging { get; private set; }
+        [DataMember]
+        public int MaxWeight { get; private set; }
 
-        public Program(string name, int duration, Detergents detergent, int temperature, int centrifuging)
+        public Program(string name, int duration, Detergents detergent, int temperature, int centrifuging, int maxWeight)
         {
             Name = name;
             Duration = duration;
             Detergent = detergent;
             Temperature = temperature;
             Centrifuging = centrifuging;
+            MaxWeight = maxWeight;
         }
     }
 }

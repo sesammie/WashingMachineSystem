@@ -25,8 +25,10 @@ namespace WashSystem
 
         public List<Clothes> GetAllClothes()
         {
-            string sql = "SELECT * FROM Clothes";
+            string sql = "SELECT ClothesId, ClothesType, WashTypes.WashType, Detergents.Detergent, Locations.Location, Maxtemp, Info, Weight FROM WashTypes, Clothes, Locations, Detergents WHERE Clothes.WashTypeId = WashTypes.WashTypeId AND Clothes.DetergentId = Detergents.DetergentId AND Clothes.LocationId = Locations.LocationID ";
             OleDbCommand command = new OleDbCommand(sql, connection);
+
+            int id = 100;
 
             List<Clothes> clothes = new List<Clothes>();
             try
@@ -36,14 +38,15 @@ namespace WashSystem
 
                 while (reader.Read())
                 {
-                    int id = Convert.ToInt32(reader["Id"]);
+                    id = Convert.ToInt32(reader["ClothesId"]);
                     string clothesType = Convert.ToString(reader["ClothesType"]);
                     string washTypes = Convert.ToString(reader["WashType"]);
-                    string detergent = Convert.ToString(reader["detergent"]);
-                    string location = Convert.ToString(reader["location"]);
+                    string detergent = Convert.ToString(reader["Detergent"]);
+                    string location = Convert.ToString(reader["Location"]);
                     int maxTemp = Convert.ToInt32(reader["Maxtemp"]);
-                    string info = Convert.ToString(reader["info"]);
-                    clothes.Add(new Clothes(id, clothesType, washTypes, detergent, location, maxTemp, info));
+                    string info = Convert.ToString(reader["Info"]);
+                    int weight = Convert.ToInt32(reader["Weight"]);
+                    clothes.Add(new Clothes(id, clothesType, washTypes, detergent, location, maxTemp, info, weight));
                 }
             }
             catch
@@ -55,6 +58,28 @@ namespace WashSystem
                 connection.Close();
             }
             return clothes;
+        }
+
+        public bool AddClothes(string clothesType, string info, int washType, int detergent, int location, int maxTemp, int weight)
+        {
+
+            string sql = "INSERT INTO Clothes (ClothesType, Info, WashTypeId, DetergentId, LocationId, MaxTemp, Weight) VALUES ('" + clothesType + "', '" + info + "', '" + washType + "', '" + detergent + "', '" + location + "', '" + maxTemp + "', '" + weight + "')";
+            OleDbCommand command = new OleDbCommand(sql, connection);
+
+            try
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return true;
         }
     }
 }
