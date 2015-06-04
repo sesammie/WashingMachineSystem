@@ -16,5 +16,7 @@ namespace WashSystem
         List<WashTypes> GetWashTypeList();
         [OperationContract]
         List<Detergents> GetDetergentList();
+        [OperationContract]
+        List<Clothes> GetClothesList();
     }   
 }

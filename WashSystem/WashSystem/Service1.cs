@@ -13,6 +13,8 @@ namespace WashSystem
         public List<Program> ProgramList { get; private set; }
         public List<WashTypes> WashTypesList {get; private set;}
         public List<Detergents> DetergentsList { get; private set; }
+        Database database = new Database(); 
+
         
         public Service1()
         {
@@ -41,6 +43,11 @@ namespace WashSystem
             return ProgramList;
         }
         
+        public List<Clothes> GetClothesList()
+        {
+            return database.GetAllClothes();
+        }
+
         public List<WashTypes> GetWashTypeList()
         {
             return WashTypesList;
