@@ -8,10 +8,10 @@ using System.Runtime.Serialization;
 namespace WashSystem
 {
     [DataContract]
-    public class Clothes
+    public class Garment
     {
         [DataMember]
-        public int Id { get; private set; }
+        public int GarmentId { get; private set; }
         [DataMember]
         public string ClothesType {get; private set;}
         [DataMember]
@@ -27,9 +27,9 @@ namespace WashSystem
         [DataMember]
         public int Weight { get; private set; }
 
-        public Clothes(int id, string clothesTypes, string washTypes, string detergents, string location, int maxTemp, string info, int weight)
+        public Garment(int garmentId, string clothesTypes, string washTypes, string detergents, string location, int maxTemp, string info, int weight)
         {
-            Id = id;
+            GarmentId = garmentId;
             ClothesType = clothesTypes;
             WashType = washTypes;
             Detergent = detergents;

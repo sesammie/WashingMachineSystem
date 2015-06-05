@@ -47,7 +47,7 @@
   <ItemGroup>
     <Compile Include="Database.cs" />
     <Compile Include="Enums.cs" />
-    <Compile Include="Clothes.cs" />
+    <Compile Include="Garment.cs" />
     <Compile Include="IService1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

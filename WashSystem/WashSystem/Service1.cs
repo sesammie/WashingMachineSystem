@@ -50,13 +50,13 @@ namespace WashSystem
         {
             return DetergentsList;
         }
-        public List<Clothes> GetClothesList()
+        public List<Garment> GetClothesList()
         {
-            return database.GetAllClothes();
+            return database.GetClothesInLaundryBakset();
         }
-        public bool AddClothes()
+        public bool AddClothes(Garment clothes)
         {
-            return database.AddClothes("Pants", "sf", 1, 1, 50, 12, 250);
+            return database.AddClothes(clothes);
         }
 
 
