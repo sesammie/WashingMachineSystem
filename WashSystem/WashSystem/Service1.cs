@@ -55,6 +55,11 @@ namespace WashSystem
             return GarmentList;
         }
 
+        public Wash GetWash()
+        {
+            return sort.SortGarments();
+        }
+
     }
 }
 

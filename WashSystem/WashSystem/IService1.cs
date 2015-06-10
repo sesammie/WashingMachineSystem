@@ -16,6 +16,8 @@ namespace WashSystem
         bool SendReceivedString(string x, string Location);
         [OperationContract]
         List<Garments> UpdateList(string location);
+        [OperationContract]
+        Wash GetWash();
 
 
     }   
