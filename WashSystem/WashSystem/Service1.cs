@@ -21,10 +21,6 @@ namespace WashSystem
             sort = new Sort();
         }
 
-        public List<Garments> GetAllGermants()
-        {
-            return database.GetAllGarments();
-        }
 
         public List<Programs> GetAllPrograms()
         {

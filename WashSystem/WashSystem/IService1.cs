@@ -11,8 +11,6 @@ namespace WashSystem
     public interface IService1
     {
         [OperationContract]
-        List<Garments> GetAllGermants();
-        [OperationContract]
         List<Programs> GetAllPrograms();
         [OperationContract]
         bool AddGermant();
