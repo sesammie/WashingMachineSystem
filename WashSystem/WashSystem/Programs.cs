@@ -8,14 +8,14 @@ using System.Runtime.Serialization;
 namespace WashSystem
 {
     [DataContract]
-    public class Program
+    public class Programs
     {
         [DataMember]
         public string Name { get; private set; }
         [DataMember]
-        public int Duration { get; private set; }
+        public int NormalDuration { get; private set; }
         [DataMember]
-        public Detergents Detergent { get; private set; }
+        public int ShortDuration { get; private set; }
         [DataMember]
         public int Temperature { get; private set; }
         [DataMember]
@@ -23,11 +23,11 @@ namespace WashSystem
         [DataMember]
         public int MaxWeight { get; private set; }
 
-        public Program(string name, int duration, Detergents detergent, int temperature, int centrifuging, int maxWeight)
+        public Programs(string name, int normalDuration, int shortDuration,int temperature, int centrifuging, int maxWeight)
         {
             Name = name;
-            Duration = duration;
-            Detergent = detergent;
+            NormalDuration = normalDuration;
+            ShortDuration = ShortDuration;
             Temperature = temperature;
             Centrifuging = centrifuging;
             MaxWeight = maxWeight;

@@ -23,14 +23,15 @@ namespace WashSystem
             connection = new OleDbConnection(connectionString);
         }
 
-        public List<Garment> GetClothesInLaundryBakset()
+        public List<Garments> GetAllGarments()
         {
-            string sql = "SELECT ClothesId, ClothesType, WashTypes.WashType, Detergents.Detergent, Locations.Location, Maxtemp, Info, Weight FROM WashTypes, Clothes, Locations, Detergents WHERE Clothes.WashTypeId = WashTypes.WashTypeId AND Clothes.DetergentId = Detergents.DetergentId AND Clothes.LocationId = Locations.LocationID";
+            string sql = "SELECT Garments.Garment_Id, Programs.Name, Locations.Location, Colors.Color, Garments.MaxTemp, Garments.Weight FROM Garments, Locations, Programs, Colors WHERE Garments.Program_Id = Programs.Program_Id AND Garments.Color_Id = Colors.Color_Id AND Garments.Location_Id = Locations.Location_Id";
             OleDbCommand command = new OleDbCommand(sql, connection);
 
-            int id = 100;
+            int id, weight, maxTemp;
+            string program, location;
 
-            List<Garment> garmentList = new List<Garment>();
+            List<Garments> garmentList = new List<Garments>();
             try
             {
                 connection.Open();
@@ -38,18 +39,17 @@ namespace WashSystem
 
                 while (reader.Read())
                 {
-                    id = Convert.ToInt32(reader["ClothesId"]);
-                    string clothesType = Convert.ToString(reader["ClothesType"]);
-                    string washTypes = Convert.ToString(reader["WashType"]);
-                    string detergent = Convert.ToString(reader["Detergent"]);
-                    string location = Convert.ToString(reader["Location"]);
-                    int maxTemp = Convert.ToInt32(reader["Maxtemp"]);
-                    string info = Convert.ToString(reader["Info"]);
-                    int weight = Convert.ToInt32(reader["Weight"]);
-                    garmentList.Add(new Garment(id, clothesType, washTypes, detergent, location, maxTemp, info, weight));
+                    id = Convert.ToInt32(reader["Garment_Id"]);
+                    weight = Convert.ToInt32(reader["Weight"]);
+                    maxTemp = Convert.ToInt32(reader["MaxTemp"]);
+                    program = Convert.ToString(reader["Name"]);
+                    location = Convert.ToString(reader["Location"]);
+
+                    string color = Convert.ToString(reader["Color"]);
+                    garmentList.Add(new Garments(id, program, location, maxTemp, color, weight));
                 }
             }
-            catch
+            catch 
             {
                 return null;
             }
@@ -60,10 +60,69 @@ namespace WashSystem
             return garmentList;
         }
 
-        public bool AddClothes(Garment clothes)
+        public List<Programs> GetAllPrograms()
         {
+            string sql = "SELECT Programs.Temp, Programs.NormalDuration, Programs.ShortDuration, Programs.MaxWeight, Programs.Name, Programs.Centrifuging FROM Programs";
+            OleDbCommand command = new OleDbCommand(sql, connection);
 
-            string sql = "INSERT INTO Clothes (ClothesType, Info, WashTypeId, DetergentId, LocationId, MaxTemp, Weight) VALUES ('" + clothes.ClothesType + "', '" + clothes.Info + "', '" + clothes.WashType + "', '" + clothes.Detergent + "', '" + clothes.Location + "', '" + clothes.MaxTemp + "', '" + clothes.Weight + "')";
+            int temp, normalDuration, shortDuration, maxWeight, centrifuging;
+            string name;
+
+            List<Programs> ProgramList = new List<Programs>();
+            try
+            {
+                connection.Open();
+                OleDbDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    name = Convert.ToString(reader["Name"]);
+                    normalDuration = Convert.ToInt32(reader["NormalDuration"]);
+                    shortDuration = Convert.ToInt32(reader["ShortDuration"]);
+                    maxWeight = Convert.ToInt32(reader["MaxWeight"]);
+                    temp = Convert.ToInt32(reader["Temp"]);
+                    centrifuging = Convert.ToInt32(reader["Centrifuging"]);
+                    ProgramList.Add(new Programs(name, normalDuration, shortDuration, temp, centrifuging, maxWeight));
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return ProgramList;
+        }
+
+
+        public bool AddGarment(Garments garment)
+        {
+            string sql = "INSERT INTO Garments (Garment_Id, Program_Id, Location_id, Color_Id, MaxTemp, Weight) SELECT " + garment.GarmentId + ", Programs.Program_Id, Locations.Location_Id, Colors.Color_Id, " + garment.MaxTemp + ", " + garment.Weight + " FROM Programs, Locations, Colors WHERE Colors.Color = '" + garment.Color + "' AND Locations.Location = '" + garment.Location + "' AND Programs.Name = '" + garment.Program + "'";
+            OleDbCommand command = new OleDbCommand(sql, connection);
+
+            try
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return true;
+        }
+
+        public bool UpdateGarmentLocation(int garmentId, string newLocation)
+        {
+            string sql = "UPDATE Garments, Locations Set Garments.Location_Id = Locations.Location_Id WHERE Garments.Garment_Id = " + garmentId + " AND Locations.Location = '" + newLocation + "'";
+            
             OleDbCommand command = new OleDbCommand(sql, connection);
 
             try

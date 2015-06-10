@@ -11,14 +11,14 @@ namespace WashSystem
     public interface IService1
     {
         [OperationContract]
-        List<Program> GetProgramList();
+        List<Garments> GetAllGermants();
         [OperationContract]
-        List<WashTypes> GetWashTypeList();
+        List<Programs> GetAllPrograms();
         [OperationContract]
-        List<Detergents> GetDetergentList();
+        bool AddGermant();
         [OperationContract]
-        List<Garment> GetClothesList();
+        bool UpdateGermantLocation();
         [OperationContract]
-        bool AddClothes(Garment clothes);
+        string SortGarments();
     }   
 }
