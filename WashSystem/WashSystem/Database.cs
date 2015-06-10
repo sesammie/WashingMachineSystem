@@ -17,6 +17,7 @@ namespace WashSystem
         {
             string provider = "Provider=Microsoft.ACE.OLEDB.12.0";
             string path = @"C:\Users\Sam\Documents\GitHub\WashingMachineSystem\";
+            //string path = @"D:\SCHOOLCAHELLE\PROFTAAK\WashingMachineSystem-CSA";
             string file = path + "/Kledingkast.accdb";
 
             string connectionString = provider + ";Data Source=" + file;

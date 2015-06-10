@@ -8,3 +8,6 @@ C:\Users\tianc_000\Desktop\P8-Washing-system\Clientwasmachine\bin\Debug\WindowsF
 C:\Users\tianc_000\Desktop\P8-Washing-system\Clientwasmachine\bin\Debug\WindowsFormsApplication13.pdb
 C:\Users\tianc_000\Desktop\P8-Washing-system\Clientwasmachine\obj\Debug\WindowsFormsApplication13.exe
 C:\Users\tianc_000\Desktop\P8-Washing-system\Clientwasmachine\obj\Debug\WindowsFormsApplication13.pdb
+C:\Users\Sam\Documents\GitHub\WashingMachineSystem\Clientwasmachine\bin\Debug\WindowsFormsApplication13.exe.config
+C:\Users\Sam\Documents\GitHub\WashingMachineSystem\Clientwasmachine\obj\Debug\WindowsFormsApplication13.exe
+C:\Users\Sam\Documents\GitHub\WashingMachineSystem\Clientwasmachine\obj\Debug\WindowsFormsApplication13.pdb
