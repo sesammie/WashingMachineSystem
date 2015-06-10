@@ -1,0 +1,10 @@
+c:\users\tianc_000\documents\visual studio 2012\Projects\WindowsFormsApplication13\WindowsFormsApplication13\bin\Debug\WindowsFormsApplication13.exe.config
+C:\Users\tianc_000\Desktop\P8-Washing-system\Clientwasmachine\bin\Debug\WindowsFormsApplication13.exe.config
+C:\Users\tianc_000\Desktop\P8-Washing-system\Clientwasmachine\obj\Debug\WindowsFormsApplication13.csprojResolveAssemblyReference.cache
+C:\Users\tianc_000\Desktop\P8-Washing-system\Clientwasmachine\obj\Debug\WindowsFormsApplication13.Form1.resources
+C:\Users\tianc_000\Desktop\P8-Washing-system\Clientwasmachine\obj\Debug\WindowsFormsApplication13.Properties.Resources.resources
+C:\Users\tianc_000\Desktop\P8-Washing-system\Clientwasmachine\obj\Debug\WindowsFormsApplication13.csproj.GenerateResource.Cache
+C:\Users\tianc_000\Desktop\P8-Washing-system\Clientwasmachine\bin\Debug\WindowsFormsApplication13.exe
+C:\Users\tianc_000\Desktop\P8-Washing-system\Clientwasmachine\bin\Debug\WindowsFormsApplication13.pdb
+C:\Users\tianc_000\Desktop\P8-Washing-system\Clientwasmachine\obj\Debug\WindowsFormsApplication13.exe
+C:\Users\tianc_000\Desktop\P8-Washing-system\Clientwasmachine\obj\Debug\WindowsFormsApplication13.pdb
