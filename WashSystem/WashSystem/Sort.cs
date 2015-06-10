@@ -20,14 +20,17 @@ namespace WashSystem
         {
             foreach (Garments garment in database.GetAllGarments())
             {
-                for (int i = 0; i < 8; i++)
+                if (garment.Location == "LaundryBasket")
                 {
-                    if (garment.Program == programs[i])
+                    for (int i = 0; i < 8; i++)
                     {
-                        weight[i] += garment.Weight;
-                        numbers[i] += 1;
+                        if (garment.Program == programs[i])
+                        {
+                            weight[i] += garment.Weight;
+                            numbers[i] += 1;
+                        }
                     }
-                }       
+                }
             }
 
             foreach (Programs program in database.GetAllPrograms())
@@ -37,7 +40,7 @@ namespace WashSystem
                     if (program.Name == programs[i])
                     {
                             // gewicht moet lager zijn dan maxgewicht maar mag 500 gram minder zijn
-                        if (weight[i] + maxDiferenceWeight > program.MaxWeight * 1000)
+                        if ((weight[i] + maxDiferenceWeight > program.MaxWeight * 1000) && (weight[i] + maxDiferenceWeight < program.MaxWeight * 1000 + maxDiferenceWeight))
                         {
                             temp = i; 
                         }

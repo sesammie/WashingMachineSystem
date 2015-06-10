@@ -10,13 +10,13 @@ namespace WashSystem
     public class Service1 : IService1
     {
         
-        public List<Garments> GermantList { get; private set; }
+        public List<Garments> GarmentList { get; private set; }
         Database database;
         Sort sort;
         
         public Service1()
         {
-            GermantList = new List<Garments>();
+            GarmentList = new List<Garments>();
             database = new Database();
             sort = new Sort();
         }
@@ -27,19 +27,34 @@ namespace WashSystem
             return database.GetAllPrograms();
         }
 
-        public bool AddGermant()
+        public bool SendReceivedString(string garmentId, string location )
         {
-            return database.AddGarment(new Garments(20, "Dark/Jeans", "LaundryBasket", 45, "Black", 185));
+            foreach (Garments garments in database.GetAllGarments())
+            {
+                if (garments.GarmentId == garmentId)
+                {
+                    database.UpdateGarmentLocation(garmentId, location);
+                    break;
+                }
+            }
+
+            return true;
         }
 
-        public bool UpdateGermantLocation()
+        public List<Garments> UpdateList(string location)
         {
-            return database.UpdateGarmentLocation(14, "LaundryBasket");
+            foreach (Garments garment in database.GetAllGarments())
+            {
+                if (garment.Location == location)
+                {
+                    GarmentList.Clear();
+                    GarmentList.Add(garment);
+                }
+            }
+
+            return GarmentList;
         }
-        public string SortGarments()
-        {
-            return sort.SortGarments();
-        }
+
     }
 }
 
