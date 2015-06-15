@@ -1,6 +1,5 @@
 C:\Users\Sam\Documents\GitHub\WashingMachineSystem\WashSystem\WashSystem\bin\Debug\WashSystem.dll.config
 C:\Users\Sam\Documents\GitHub\WashingMachineSystem\WashSystem\WashSystem\bin\Debug\WashSystem.dll
 C:\Users\Sam\Documents\GitHub\WashingMachineSystem\WashSystem\WashSystem\bin\Debug\WashSystem.pdb
-C:\Users\Sam\Documents\GitHub\WashingMachineSystem\WashSystem\WashSystem\obj\Debug\WashSystem.csprojResolveAssemblyReference.cache
 C:\Users\Sam\Documents\GitHub\WashingMachineSystem\WashSystem\WashSystem\obj\Debug\WashSystem.dll
 C:\Users\Sam\Documents\GitHub\WashingMachineSystem\WashSystem\WashSystem\obj\Debug\WashSystem.pdb

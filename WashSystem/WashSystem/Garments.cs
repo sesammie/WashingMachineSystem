@@ -11,7 +11,7 @@ namespace WashSystem
     public class Garments
     {
         [DataMember]
-        public int GarmentId { get; private set; }
+        public string GarmentId { get; private set; }
         [DataMember]
         public string Program { get; private set; }
         [DataMember]
@@ -23,7 +23,7 @@ namespace WashSystem
         [DataMember]
         public int Weight { get; private set; }
 
-        public Garments(int garmentId, string program, string location, int maxTemp, string color, int weight)
+        public Garments(string garmentId, string program, string location, int maxTemp, string color, int weight)
         {
             GarmentId = garmentId;
             Program = program;

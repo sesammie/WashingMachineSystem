@@ -29,8 +29,8 @@ namespace WashSystem
             string sql = "SELECT Garments.Garment_Id, Programs.Name, Locations.Location, Colors.Color, Garments.MaxTemp, Garments.Weight FROM Garments, Locations, Programs, Colors WHERE Garments.Program_Id = Programs.Program_Id AND Garments.Color_Id = Colors.Color_Id AND Garments.Location_Id = Locations.Location_Id";
             OleDbCommand command = new OleDbCommand(sql, connection);
 
-            int id, weight, maxTemp;
-            string program, location;
+            int weight, maxTemp;
+            string program, location, id;
 
             List<Garments> garmentList = new List<Garments>();
             try
@@ -40,7 +40,7 @@ namespace WashSystem
 
                 while (reader.Read())
                 {
-                    id = Convert.ToInt32(reader["Garment_Id"]);
+                    id = Convert.ToString(reader["Garment_Id"]);
                     weight = Convert.ToInt32(reader["Weight"]);
                     maxTemp = Convert.ToInt32(reader["MaxTemp"]);
                     program = Convert.ToString(reader["Name"]);
@@ -120,7 +120,7 @@ namespace WashSystem
             return true;
         }
 
-        public bool UpdateGarmentLocation(int garmentId, string newLocation)
+        public bool UpdateGarmentLocation(string garmentId, string newLocation)
         {
             string sql = "UPDATE Garments, Locations Set Garments.Location_Id = Locations.Location_Id WHERE Garments.Garment_Id = " + garmentId + " AND Locations.Location = '" + newLocation + "'";
             

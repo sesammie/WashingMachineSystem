@@ -13,10 +13,12 @@ namespace WashSystem
         [OperationContract]
         List<Programs> GetAllPrograms();
         [OperationContract]
-        bool AddGermant();
+        bool SendReceivedString(string x, string Location);
         [OperationContract]
-        bool UpdateGermantLocation();
+        List<Garments> UpdateList(string location);
         [OperationContract]
-        string SortGarments();
+        Wash GetWash();
+
+
     }   
 }
