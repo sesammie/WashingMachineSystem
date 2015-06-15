@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WashSystem" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WashSystem" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://145.93.90.28:8733/Design_Time_Addresses/WashSystem/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfPrograms">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Programs" nillable="true" type="tns:Programs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrograms" nillable="true" type="tns:ArrayOfPrograms" />
+  <xs:complexType name="Programs">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Centrifuging" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxWeight" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NormalDuration" type="xs:int" />
+      <xs:element minOccurs="0" name="ShortDuration" type="xs:int" />
+      <xs:element minOccurs="0" name="Temperature" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Programs" nillable="true" type="tns:Programs" />
+  <xs:complexType name="ArrayOfGarments">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Garments" nillable="true" type="tns:Garments" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGarments" nillable="true" type="tns:ArrayOfGarments" />
+  <xs:complexType name="Garments">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GarmentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxTemp" type="xs:int" />
+      <xs:element minOccurs="0" name="Program" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Garments" nillable="true" type="tns:Garments" />
+  <xs:complexType name="Wash">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Garmentlist" nillable="true" type="tns:ArrayOfGarments" />
+      <xs:element minOccurs="0" name="program" nillable="true" type="tns:Programs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Wash" nillable="true" type="tns:Wash" />
+</xs:schema>
