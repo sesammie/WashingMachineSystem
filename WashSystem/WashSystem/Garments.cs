@@ -22,8 +22,10 @@ namespace WashSystem
         public string Color { get; private set; }
         [DataMember]
         public int Weight { get; private set; }
+        [DataMember]
+        public string Info { get; private set; }
 
-        public Garments(string garmentId, string program, string location, int maxTemp, string color, int weight)
+        public Garments(string garmentId, string program, string location, int maxTemp, string color, int weight, string info)
         {
             GarmentId = garmentId;
             Program = program;
@@ -31,6 +33,13 @@ namespace WashSystem
             MaxTemp = maxTemp;
             Color = color;
             Weight = weight;
+            Info = info;
+
+        }
+
+        public override string ToString()
+        {
+            return GarmentId + " - " + Program + " - " + Location + " - " + MaxTemp.ToString() + " - " + Color + " - " + Weight.ToString();
         }
 
     }

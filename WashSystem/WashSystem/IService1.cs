@@ -18,7 +18,9 @@ namespace WashSystem
         List<Garments> UpdateList(string location);
         [OperationContract]
         Wash GetWash();
-
-
+        [OperationContract]
+        List<Garments> GetAllGarments();
+        [OperationContract]
+        string GetServerName();
     }   
 }

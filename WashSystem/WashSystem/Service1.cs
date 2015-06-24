@@ -8,8 +8,7 @@ using System.Text;
 namespace WashSystem
 {
     public class Service1 : IService1
-    {
-        
+    {    
         public List<Garments> GarmentList { get; private set; }
         Database database;
         Sort sort;
@@ -21,10 +20,19 @@ namespace WashSystem
             sort = new Sort();
         }
 
+        public List<Garments> GetAllGarments()
+        {
+            return database.GetAllGarments();
+        }
 
         public List<Programs> GetAllPrograms()
         {
             return database.GetAllPrograms();
+        }
+
+        public string GetServerName()
+        {
+            return "WashSystem";
         }
 
         public bool SendReceivedString(string garmentId, string location )
@@ -33,6 +41,11 @@ namespace WashSystem
             {
                 if (garments.GarmentId == garmentId)
                 {
+                    if (location == garments.Location)
+                    {
+                        location = "Elsewhere";
+                    }
+
                     database.UpdateGarmentLocation(garmentId, location);
                     break;
                 }
@@ -43,11 +56,12 @@ namespace WashSystem
 
         public List<Garments> UpdateList(string location)
         {
+            GarmentList.Clear();
+
             foreach (Garments garment in database.GetAllGarments())
             {
                 if (garment.Location == location)
                 {
-                    GarmentList.Clear();
                     GarmentList.Add(garment);
                 }
             }
